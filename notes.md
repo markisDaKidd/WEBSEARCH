@@ -7,9 +7,11 @@ search for anything, display it in browser.(google alt)
 
 --npm packages
   google-search-results-nodejs
-  **socket.io
+  socket.io
   node-fetch
   ejs 
+  @babel/core, preset-env, babel-loader
+  webpack, webpack-cli
 
 
 
