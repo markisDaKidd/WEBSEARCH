@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap');;
 
 *{
     margin: 0;
@@ -9,25 +9,31 @@
 }
 
 :root{
-    font-family: 'Original Surfer', sans-serif;
+    font-family: 'Nova Mono', sans-serif;
 }
 
-.content{
+.main{
     position: relative;
     text-align: center;
-    top: 50vh;
+    top: 35vh;
     
 }
 [name="searchbar"]{
-    border: 0 solid #000;
+    display: inline-block;
+    box-sizing: border-box;
+    border: .2em solid #000;
     width: 25em;
-    height: 2em;
+    height: 2.5em;
     border-radius: 10em;
+    padding: .7em;
+    padding-right: 2em;
+    background-image: url(./images/glass.svg);
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: center;
 }
 
 #title{
-    position: relative;
-    text-align: center;
-    top: 30vh;
+    font-size: 2em ;
     
 }
