@@ -15,11 +15,14 @@
         </div>
         
         <div class="content">
-            <form action="/search" method="get">
-                <input type="text" name="searchbar" >
+            <form id ='form'  method="post" action ='/return-items'>
+                <input id='searchfield'type="text" name="searchbar" >
             </form>
         </div>
     </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+   <script defer src="./scripts/index.js"></script>
   
     
 </body>
