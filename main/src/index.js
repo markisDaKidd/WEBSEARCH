@@ -1,5 +1,8 @@
-let t =['sds','ss','dsd']
+let x ={
+    a:1,
+    b:2
+}
 
-for(let i of t){
-    console.log(i);
+for(let t in x ){
+    console.log(x[t]);
 }

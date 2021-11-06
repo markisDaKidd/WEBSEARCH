@@ -1,16 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap');;
 
 *{
-    margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-    line-height: normal;
+    font-family: 'Nova Mono', sans-serif;
+    font-size: 12px;
+    margin: 0px;
+	padding: 0px;
+	border: 0px;
 }
 
 :root{
     font-family: 'Nova Mono', sans-serif;
     font-size: 12px;
+    margin: 0px;
+	padding: 0px;
+	border: 0px;
+	font-size: 100%;
+    line-height: normal;
 }
 
 .main{

@@ -1,29 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap');;
 
-html,body{
+*{
     margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-    line-height: normal;
+    padding: 0;
+    
 }
 
-:root{
+:root,body{
     font-family: 'Nova Mono', sans-serif;
     font-size: 12px;
+    margin: 0;
+    padding: 0;
 }
 
 main{
+    display: inline-block;
     position: relative;
     top: 15vh;
     width: 100%;
 }
 .nav-wrapper{
+    margin: 0;
+    padding: 0;
     position: fixed;
     width: 100%;
     height: 10%;
-    border-bottom: .1rem solid grey;
-    background-color: grey;
+    background-color: white;
+    border-bottom: .1rem solid gray;
+    border-top: .1rem solid gray ;
+    z-index: 10;
 }
 
 .nav{
@@ -35,7 +40,8 @@ main{
 
 [name="res-input"]{
     margin-left: 5rem;
-    font-size: 1.5em;
+    font-size: 1.4em;
+    font-weight: lighter;
     box-sizing: border-box;
     border: .2rem solid #000;
     width: 40rem;
@@ -54,9 +60,93 @@ section{
     font-family: 'Courier New', Courier, monospace;
     font-size: 1.5em;
     box-sizing: border-box;
-    border: .2rem solid #000;
+    border: 0rem solid #000;
     margin-left: 5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3.5rem;
     width: 30%;
     height: 20%;
+    overflow-x: auto;
+}
+.graph{
+    /* display: inline-block; */
+    position: absolute;
+    right: 15em;
+    top: 3vh;
+    
+    width: 15%;
+    height: 25%;
+   
+}
+
+.graph a{
+    
+    /* overflow: hidden; */
+    display: inline-block;
+    width: 40%;
+    overflow: hidden; /* make sure it hides the content that overflows */
+    white-space: nowrap; /* don't break the line */
+    text-overflow: ellipsis; /* give the beautiful '...' effect */
+}
+
+
+.header{
+    font-size: .6em;
+}
+
+.description{
+    font-size: .8em;
+}
+
+a .title-link{
+    display: inline-block;
+    width: 100%;
+    color: darkblue;
+    font-size: .8em;
+    text-decoration: none;
+}
+a:hover .title-link{
+    text-decoration: underline;
+}
+a:visited .title-link{
+    color: purple;
+}
+a .title-text{
+    display:inline-block;
+    color: black;
+    font-size: .7em;
+    text-decoration: none;
+}
+a:hover .title-text{
+    text-decoration: none;
+}
+a:visited .title-text{
+    color: black;
+    text-decoration: none;
+}
+/* main:after{
+    margin-left: 5rem;
+    display: inline-block;
+    position: relative;
+    content: 'Show More';
+    transition: transform 1s;
+    font-size: 2rem;
+    margin-bottom: 2em;
+}
+
+main:hover:after{
+    display: inline-block;
+    transform: rotate(180deg);
+    color: red;
+} */
+
+.show{
+    display: block;
+    position: absolute;
+    margin-left: 5rem;
+    transition: transform 1s ease;
+    bottom: 0em;
+}
+.show:hover{
+    transform: rotate(360deg);
+    color: blueviolet;
 }

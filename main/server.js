@@ -24,7 +24,7 @@ app.get('/',(req,res)=>{
 
 app.post('/return-items',(req,res)=>{
     search.json({engine:'google',q:`${req.body.searchbar}`},(stuff)=>{
-        res.render('results',{arr:stuff['organic_results']})
+        res.render('results',{arr:stuff})
     })
 })
 

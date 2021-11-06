@@ -17,25 +17,50 @@
         </nav>
     </div>
     <main>
-        <% for(let i of arr) { %>
+        <% for(let i of arr.organic_results) { %>
             <section>
-                <div class="url">
-                    <%= i.title %>
-                </div>
                 <div class="title-link">
-                    <%= i.displayed_link %>
+                    <a href="<%= i.link %>">
+                        <div class ='title-link'>
+                            <%= i.displayed_link %>
+                        </div>
+                        <div class="title-text">
+                            <h1><%= i.title %>
+                            </h1>
+                        </div>
+                       
+                    </a>                
+                    
                 </div>
+               
                 <div class="description">
                     <%= i.snippet %>
                 </div>
-
-
-
             </section>
-          <% } %>
+        <% } %>
+
+
+        <div class="graph">
+            
+            <h3><%- arr.knowledge_graph.title %></h1>
+            <a href="<%- arr.knowledge_graph.website %>">
+                <%- arr.knowledge_graph.website %>
+            </a>
+            <br>
+            <article>
+                <%- arr.knowledge_graph.description %>
+            </article>
+        </div>
+
+        <div class="show">
+            <h3 style='font-weight: 100;'>Show More</h3>
+        </div>
         
 
     </main>
+
+
+
    
   
     
