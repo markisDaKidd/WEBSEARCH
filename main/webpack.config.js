@@ -1,13 +1,13 @@
 let path =require('path')
 module.exports={
     entry:'./src/index.js',
-    mode:development,
+    mode:'production',
     output: {
-        path: path.resolve( __dirname, 'dist' ),
+        path: path.resolve( __dirname, 'dist/scripts', ),
         filename: 'main.js'
     },
     resolve:{
-        extensions:['.js','.jsx']
+        extensions:['.js']
     },
     watch:true,
     module:{
@@ -17,7 +17,7 @@ module.exports={
 
         },
         {
-            test:/\.(js|jsx)$/,
+            test:/\.js$/,
             use:['babel-loader'],
             exclude:'/node_modules/'
         }
