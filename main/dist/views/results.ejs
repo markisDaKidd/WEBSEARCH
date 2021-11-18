@@ -11,12 +11,31 @@
     
     <div class="nav-wrapper">
         <nav class="nav">
-            <form action="" method="get">
-                <input type="text" name="res-input" >
+            <form action="/return-items" method="post">
+                <input type="text" name="searchbar" >
             </form>
+            <div id ='title'>
+                <h1>Surf-Buddy</h1>
+            </div>
         </nav>
     </div>
     <main>
+
+    <%if(arr.organic_results){%>
+        <%if(arr.knowledge_graph) {%>
+            <div class="graph">
+                
+                <h3><%- arr.knowledge_graph.title %></h1>
+                <a href="<%- arr.knowledge_graph.website %>">
+                    <%- arr.knowledge_graph.website %>
+                </a>
+                <br>
+                <article>
+                    <%- arr.knowledge_graph.description %>
+                </article>
+            </div>
+            <%}%>
+            
         <% for(let i of arr.organic_results) { %>
             <section>
                 <div class="title-link">
@@ -40,24 +59,20 @@
         <% } %>
 
 
-        <div class="graph">
-            
-            <h3><%- arr.knowledge_graph.title %></h1>
-            <a href="<%- arr.knowledge_graph.website %>">
-                <%- arr.knowledge_graph.website %>
-            </a>
-            <br>
-            <article>
-                <%- arr.knowledge_graph.description %>
-            </article>
-        </div>
-
         <div class="show">
             <h3 style='font-weight: 100;'>Show More</h3>
         </div>
+     
         
 
-    </main>
+     </main>
+    <%}%>
+
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ejs@3.1.6/ejs.min.js"></script>
+    <script type = 'module' crossorigin='ananymous' src="../scripts/index.js"></script>
 
 
 

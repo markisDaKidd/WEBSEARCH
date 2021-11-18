@@ -6,7 +6,7 @@
     
 }
 
-:root,body{
+:root,body,html{
     font-family: 'Nova Mono', sans-serif;
     font-size: 12px;
     margin: 0;
@@ -14,7 +14,6 @@
 }
 
 main{
-    display: inline-block;
     position: relative;
     top: 15vh;
     width: 100%;
@@ -36,9 +35,11 @@ main{
     justify-content: flex-start;
     align-items: center;
     height: 100%;
+    width: 100%;
 }
 
-[name="res-input"]{
+[name="searchbar"]{
+    text-align: center;
     margin-left: 5rem;
     font-size: 1.4em;
     font-weight: lighter;
@@ -142,7 +143,8 @@ main:hover:after{
 .show{
     display: block;
     position: absolute;
-    margin-left: 5rem;
+    margin-left: 60rem;
+    margin-top: 5em;
     transition: transform 1s ease;
     bottom: 0em;
 }
@@ -150,3 +152,79 @@ main:hover:after{
     transform: rotate(360deg);
     color: blueviolet;
 }
+
+#title{
+    position: relative;
+    font-size: 2em ;
+    float: right;
+    right: 0;
+    width: 100%;
+    margin-left: 45em;
+    
+}
+@media screen and (max-width:540px){
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+    :root,html,body{
+        font-size: 8px;
+    }
+    section{
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+    .graph{
+        text-align: center;
+        position: relative;
+        right: 0;
+        top: 0;
+        margin-bottom: 3.5rem;
+        width: 100%;
+        order: -1;
+        width: 100%;
+    }
+    [name="searchbar"]{
+        margin-top: 2em;
+        text-align: center;
+        width: 85vw;
+        margin-left: 0;
+        padding: 1em;
+       
+        
+    }
+    .nav{
+        display: block;
+        text-align: center;
+    }
+    #title{
+        display: none;
+    }
+    .show{
+        margin-left: 5em;
+    }
+}
+
+@media  screen and(max-width:768px) {
+    :root,html,body{
+        font-size: 12px;
+    }
+
+    .show{
+        margin-left: 5em;
+    }
+
+   section{
+       max-width: fit-content;
+   }
+    
+}
+
+@media screen and (max-width:1024px) {
+    section{
+        max-width: fit-content;
+    }
+}
+
